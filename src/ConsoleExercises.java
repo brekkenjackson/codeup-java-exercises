@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import static java.lang.Integer.parseInt;
+
 public class ConsoleExercises {
     public static void main(String[] args) {
 //        double pi = 3.14159;
@@ -40,10 +42,13 @@ public class ConsoleExercises {
 
         Scanner perimeter = new Scanner(System.in);
         System.out.print("Enter the height: ");
-        int periHeight = perimeter.nextInt();
+        String periHeight = perimeter.nextLine();
+        int number1 = parseInt(periHeight);
         System.out.print("Enter the width: ");
-        int periWidth = perimeter.nextInt();
-        System.out.printf("The perimeter is: %s %n", periHeight*2 + periWidth*2);
+        String periWidth = perimeter.nextLine();
+        int number2 = parseInt(periWidth);
+        int periTotal = number1*2 + number2*2;
+        System.out.printf("The perimeter is: %d \n", periTotal);
 
     }
 }
