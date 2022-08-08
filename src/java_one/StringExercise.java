@@ -1,3 +1,4 @@
+package java_one;
 
 public class StringExercise {
     public static void main(String[] args) {
