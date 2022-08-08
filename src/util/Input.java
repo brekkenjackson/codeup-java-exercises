@@ -1,0 +1,60 @@
+package util;
+
+import java.util.Scanner;
+
+public class Input {
+
+    private Scanner scanner;
+
+    public Input() {
+        this.scanner = new Scanner(System.in);
+    }
+
+    public void delete() {
+        this.scanner.nextLine();
+    }
+
+    public String getString() {
+        System.out.println("My string here");
+        return this.scanner.nextLine();
+    }
+
+    public String getString(String arg) {
+        System.out.println(arg);
+        return this.scanner.nextLine();
+    }
+
+    public boolean yesNo() {
+        System.out.println("y or n?");
+        String input = this.scanner.nextLine();
+        switch (input) {
+            case ("no"):
+            case ("n"):
+            case ("nope"):
+            case ("nah"):
+                return false;
+            case ("yes"):
+            case ("y"):
+            case ("sure"):
+            case ("yep"):
+                return true;
+            case ("maybe"):
+                System.out.println("Try again >:O");
+                return yesNo();
+            default:
+                return yesNo();
+        }
+    }
+
+    public double getDouble() {
+        try {
+            double userInput = Double.parseDouble(getString("Input number is:"));
+            System.out.println("That's valid");
+            return userInput;
+        } catch (NumberFormatException e) {
+            System.out.println("This is NOT double! Come back later...");
+            return getDouble();
+        }
+    }
+
+    }
