@@ -6,12 +6,10 @@ public class Person {
     private String name;
 
 
-//constructors
-    public Person(String name) {
+    public Person(String name, String smith) {
         this.name = name;
     }
 
-//accessor
     public String getName(){
 //TODO: return the person's name
         return name;
@@ -32,7 +30,7 @@ public class Person {
     }
 
     public static void main(String[] args) {
-        Person person1 = new Person("John");
+        Person person1 = new Person("John", "Smith");
         Person person2 = person1;
         System.out.println(person1.getName());
         System.out.println(person2.getName());
