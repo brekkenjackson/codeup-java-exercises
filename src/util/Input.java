@@ -57,4 +57,18 @@ public class Input {
         }
     }
 
+
+    public int getSecretInt(int min, int max) {
+        int input;
+        do {
+            System.out.println("Enter a number between " + min + " and " + (max - 1) + ".");
+            input = this.scanner.nextInt();
+            if (input < min || input > max) {
+                System.out.println("Input invalid");
+            }
+        } while (input < min || input > max);
+        System.out.println("Input acceptable");
+        return input;
+    }
+
     }
