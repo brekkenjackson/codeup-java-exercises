@@ -46,6 +46,16 @@ public class Input {
         }
     }
 
+    public int getInt() {
+        String userInput = getString("Enter an integer:");
+        try {
+            return Integer.parseInt(userInput);
+        } catch (NumberFormatException nfe) {
+            nfe.printStackTrace();
+            return getInt();
+        }
+    }
+
     public double getDouble() {
         try {
             double userInput = Double.parseDouble(getString("Input number is:"));
