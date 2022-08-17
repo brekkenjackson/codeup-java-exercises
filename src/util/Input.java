@@ -67,7 +67,6 @@ public class Input {
         }
     }
 
-
     public int getSecretInt(int min, int max) {
         int input;
         do {
