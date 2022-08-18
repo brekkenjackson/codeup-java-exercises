@@ -50,8 +50,8 @@ public class Input {
         String userInput = getString("Enter an integer:");
         try {
             return Integer.parseInt(userInput);
-        } catch (NumberFormatException nfe) {
-            nfe.printStackTrace();
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
             return getInt();
         }
     }
